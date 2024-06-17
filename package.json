@@ -1,7 +1,7 @@
 {
     "name": "acteris",
     "preductname": "Acteris",
-    "version": "6.0.2",
+    "version": "6.0.4",
     "description": "Launcher Mincraft pour le serveur Acteris",
     "main": "src/app.js",
     "author": {
