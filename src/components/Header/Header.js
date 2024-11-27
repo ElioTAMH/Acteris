@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Home,
-  Blocks,
-  ShoppingCart,
-  MessageCircle,
-  Users,
-  Server,
-  Menu,
-  X,
-} from "lucide-react";
+import { Home, Blocks, Users, Download, Menu, X } from "lucide-react";
 import { UseHeader } from "./UseHeader";
 
 function Header() {
@@ -38,9 +29,9 @@ function Header() {
             <Users size={18} />
             <span>127/500</span>
           </div>
-          <button className="ServerIp">
-            <Server size={18} />
-            <span>play.acteris.com</span>
+          <button className="LauncherButton">
+            <Download size={18} />
+            <span>Télécharger</span>
           </button>
           {IsMobile && (
             <button className="MenuToggle" onClick={ToggleMenu}>

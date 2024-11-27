@@ -37,7 +37,7 @@
     letter-spacing: 2px;
     color: var(--LightColor);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: letter-spacing 0.2s ease-out;
     position: relative;
     padding: 0.2rem 0;
 
@@ -49,7 +49,7 @@
       width: 0;
       height: 2px;
       background: var(--ElementColor);
-      transition: width 0.3s ease;
+      transition: width 0.2s ease-out;
     }
 
     &:hover {
@@ -142,7 +142,7 @@
   }
 
   .ServerStatus,
-  .ServerIp {
+  .LauncherButton {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -160,7 +160,7 @@
     color: var(--Color);
   }
 
-  .ServerIp {
+  .LauncherButton {
     background: var(--ElementColor);
     color: var(--LightColor);
     border: none;
@@ -247,12 +247,12 @@
       gap: 0.5rem;
 
       .ServerStatus span,
-      .ServerIp span {
+      .LauncherButton span {
         display: none;
       }
 
       .ServerStatus,
-      .ServerIp {
+      .LauncherButton {
         padding: 0.5rem;
         border-radius: 50%;
       }
