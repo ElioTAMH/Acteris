@@ -1,0 +1,25 @@
+.Global {
+  --ElementColor: #00bd7a;
+  --Transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
+  --DarkColor: #292929;
+  --LightColor: rgb(245, 245, 245);
+}
+
+.Dark {
+  --Color: #f5f5f5;
+  --Background: #292929;
+  --BackgroundElement: #424242;
+  --BackgroundTransparent: #2c2c2ccc;
+  --Shadow: rgba(25, 25, 25, 0.7);
+  --SvgColor: brightness(0) saturate(100%) invert(100%) sepia(55%) saturate(23%)
+    hue-rotate(236deg) brightness(108%) contrast(92%);
+}
+
+.Light {
+  --Color: #292929;
+  --Background: #f5f5f5;
+  --BackgroundElement: #ffffff;
+  --BackgroundTransparent: #f5f5f5cc;
+  --Shadow: rgba(0, 0, 0, 0.1);
+  --SvgColor: none;
+}

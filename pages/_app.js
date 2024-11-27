@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { ThemeProvider } from "../src/context/ThemeContext";
 
-import '../src/styles/all.scss';
+import "../src/styles/all.scss";
+import "../src/components/Header/Header.scss";
 
 function MyApp({ Component, pageProps }) {
-    return (
-        <HelmetProvider>
-            <Component {...pageProps} />
-        </HelmetProvider>
-    );
+  return (
+    <HelmetProvider>
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </HelmetProvider>
+  );
 }
 
 export default MyApp;
