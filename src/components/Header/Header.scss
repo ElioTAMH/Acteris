@@ -1,0 +1,191 @@
+.header {
+    height: 80px;
+    width: calc(100% - 20px);
+    background-color: var(--sectionColor);
+    box-shadow: 0 2px 4px 0 rgba(136, 148, 171, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 999999;
+
+    &.minim {
+        background-color: transparent;
+        box-shadow: none;
+
+        .siteTitle {
+            color: var(--textColor2);
+        }
+    }
+
+    &.discret {
+
+        .siteTitle {
+            opacity: 0.7;
+            animation: leftToRightSpawn 0.5s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .topRightElement {
+            opacity: 0.7;
+            animation: rightToLeftSpawn 0.5s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .siteTitle {
+        color: var(--textColor);
+        transition-duration: 0.3s;
+        cursor: pointer;
+    }
+
+    .topRightElement {
+        box-shadow: 0 0px 6px 0 rgba(136, 148, 171, 0.35);
+        border-radius: 20px;
+        height: 50px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        background-color: var(--sectionColor);
+        transition-duration: 0.3s;
+
+        .accountName {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .profileImageLink {
+            height: 50px;
+            width: 50px;
+            margin-left: 7px;
+
+            .profileImage {
+                height: 50px;
+                width: 50px;
+                min-height: 50px;
+                min-width: 50px;
+                max-height: 50px;
+                max-width: 50px;
+            }
+        }
+
+        .tabButton {
+            margin-left: 7px;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+                svg {
+                    scale: 1.1;
+                }
+            }
+
+            svg {
+                transition-duration: 0.3s;
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+    .signin {
+        min-width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        height: 30px;
+        text-decoration: none;
+        color: var(--textColor);
+        font-weight: 550;
+
+        &:hover {
+            scale: 1.06;
+        }
+    }
+}
+
+.tabContent {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--sectionColor);
+    width: 200px;
+    margin-top: 95px;
+    position: absolute;
+    right: 20px;
+    box-shadow: 0 0px 6px 0 rgba(136, 148, 171, 0.35);
+    z-index: 9999999;
+
+    .tagLink {
+        margin: 3px 0;
+        padding: 5px;
+        border-radius: 7px;
+        text-decoration: none;
+        font-weight: 600;
+        transition-duration: 0.2s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: rgb(229, 229, 229);
+            margin-left: 5px;
+
+            svg {
+                margin-right: 15px;
+                transform: scale(1.1);
+            }
+        }
+
+        svg {
+            height: 23px;
+            width: 23px;
+            fill: var(--PLACEHOLDER_COLOR);
+            margin-right: 10px;
+            transition-duration: 0.2s;
+        }
+    }
+
+    &.active {
+        animation: spawnFluid 0.3s ease-in-out forwards;
+        display: flex !important;
+    }
+
+    &.invisible {
+        animation: despawnFluid 0.3s ease-in-out forwards;
+        display: flex;
+    }
+}
+
+@keyframes leftToRightSpawn {
+    from {
+        margin-left: -1000px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes rightToLeftSpawn {
+    from {
+        margin-right: -1000px;
+    }
+
+    to {
+        margin-right: 0px;
+    }
+}
