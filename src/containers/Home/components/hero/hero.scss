@@ -201,6 +201,40 @@
       }
     }
   }
+
+  .ScrollDownButton {
+    position: relative;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: 2px solid var(--ElementColor);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: BounceDown 2s infinite;
+
+    svg {
+      color: var(--ElementColor);
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      background: var(--ElementColor);
+      transform: translateX(-50%) translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 189, 122, 0.4);
+
+      svg {
+        color: var(--LightColor);
+        transform: translateY(2px);
+      }
+    }
+  }
 }
 
 @keyframes PulseBackground {
@@ -255,6 +289,22 @@
   }
   100% {
     text-shadow: 0 0 10px rgba(0, 189, 122, 0.5);
+  }
+}
+
+@keyframes BounceDown {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
   }
 }
 

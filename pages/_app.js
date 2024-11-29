@@ -1,6 +1,5 @@
 import React from "react";
 import { HelmetProvider } from "react-helmet-async";
-import { ThemeProvider } from "../src/context/ThemeContext";
 
 import "../src/styles/all.scss";
 import "../src/components/Header/Header.scss";
@@ -8,9 +7,9 @@ import "../src/components/Header/Header.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <HelmetProvider>
-      <ThemeProvider>
+      <div className="Global Light">
         <Component {...pageProps} />
-      </ThemeProvider>
+      </div>
     </HelmetProvider>
   );
 }
