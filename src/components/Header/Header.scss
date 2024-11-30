@@ -57,12 +57,8 @@
     }
 
     &:hover {
-<<<<<<< HEAD
-      letter-spacing: 2px;
-
-=======
       letter-spacing: 3px;
->>>>>>> 97b14d434961cf01d5af3880bf1026b10c0ed82c
+
       &::after {
         width: 100%;
       }
@@ -154,9 +150,10 @@
     color: var(--LightColor);
     border: none;
     cursor: pointer;
-<<<<<<< HEAD
     position: relative;
     overflow: hidden;
+    transition: var(--Transition);
+    box-shadow: 0 2px 8px var(--Shadow);
 
     &::before {
       content: "";
@@ -175,10 +172,6 @@
     &:hover::before {
       left: 100%;
     }
-=======
-    transition: var(--Transition);
-    box-shadow: 0 2px 8px var(--Shadow);
->>>>>>> 97b14d434961cf01d5af3880bf1026b10c0ed82c
 
     &:hover {
       transform: translateY(-2px);
