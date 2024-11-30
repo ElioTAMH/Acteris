@@ -1,5 +1,5 @@
 import React from "react";
-import { Download, ChevronDown, Users, Blocks } from "lucide-react";
+import { Download, Users, Blocks, ChevronDown } from "lucide-react";
 import { UseHero } from "./UseHero";
 
 function Hero() {
@@ -30,7 +30,7 @@ function Hero() {
             <div className="HeroStats">
               <div className="StatItem">
                 <Users size={24} />
-                <span className="StatValue">10K+</span>
+                <span className="StatValue">25+</span>
                 <span className="StatLabel">Joueurs</span>
               </div>
               <div className="StatDivider" />
@@ -42,10 +42,10 @@ function Hero() {
             </div>
           </div>
         </div>
+        <button className="ScrollDownButton" onClick={ScrollToContent}>
+          <ChevronDown size={32} />
+        </button>
       </div>
-      <button className="ScrollDownButton" onClick={ScrollToContent}>
-        <ChevronDown size={32} />
-      </button>
     </section>
   );
 }
