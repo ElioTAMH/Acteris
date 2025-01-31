@@ -7,6 +7,7 @@ const { ipcRenderer } = require('electron')
 const { Status } = require('minecraft-java-core')
 const fs = require('fs');
 const pkg = require('../package.json');
+let accountName = "";
 
 import config from './utils/config.js';
 import database from './utils/database.js';
@@ -76,6 +77,10 @@ async function accountSelect(data) {
     account.classList.add('account-select');
     if (data?.profile?.skins[0]?.base64) headplayer(data.profile.skins[0].base64);
 }
+async function editAccountName(newName) {
+    accountName = newName;
+    console.log("accountName :" + accountName);
+}
 
 async function headplayer(skinBase64) {
     let skin = await new skin2D().creatHeadTexture(skinBase64);
@@ -125,6 +130,8 @@ export {
     skin2D as skin2D,
     addAccount as addAccount,
     accountSelect as accountSelect,
+    accountName as accountName,
+    editAccountName as editAccountName,
     slider as Slider,
     pkg as pkg,
     setStatus as setStatus

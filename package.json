@@ -1,6 +1,6 @@
 {
-    "name": "acteris",
-    "preductname": "Acteris",
+    "name": "acteris-launcher",
+    "preductname": "ActerisLauncher",
     "version": "6.0.4",
     "description": "Launcher Mincraft pour le serveur Acteris",
     "main": "src/app.js",
@@ -9,12 +9,12 @@
         "email": "contact@luuxis.fr",
         "url": "https://github.com/luuxis"
     },
-    "url": "https://acteris.ro-board.com",
+    "url": "https://acteris.eroxis.fr",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
         "build": "node build.js --obf=false --build=platform",
-        "icon": "node build.js --icon=https://gamenest.fr/OIG3-removebg-preview.png"
+        "icon": "node build.js --icon=https://acteris.ro-board.com/ActerisLogo.png"
     },
     "license": "CCANC",
     "nodemonConfig": {
@@ -39,6 +39,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ElioTAMH/Acteris.git"
+        "url": "git+https://github.com/ElioTAMH/ActerisLauncher.git"
     }
 }

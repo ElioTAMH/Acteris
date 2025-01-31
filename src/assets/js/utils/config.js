@@ -10,13 +10,17 @@ let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 
 let config = `${url}/launcher/config-launcher/config.json`;
 let news = `${url}/launcher/news-launcher/news.json`;
-
+import { accountName } from '../utils.js';
 class Config {
     GetConfig() {
         return new Promise((resolve, reject) => {
             nodeFetch(config).then(async config => {
-                if (config.status === 200) return resolve(config.json());
-                else return reject({ error: { code: config.statusText, message: 'server not accessible' } });
+                console.log(config.json())
+                if (config.status === 200) {
+                    resolve(config.json())
+                } else {
+                    return reject({ error: { code: config.statusText, message: 'server not accessible' } });
+                }
             }).catch(error => {
                 return reject({ error });
             })

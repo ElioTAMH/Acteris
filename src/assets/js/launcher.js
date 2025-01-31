@@ -8,7 +8,7 @@ import Home from './panels/home.js';
 import Settings from './panels/settings.js';
 
 // import modules
-import { logger, config, changePanel, database, popup, setBackground, accountSelect, addAccount, pkg } from './utils.js';
+import { logger, config, changePanel, database, popup, setBackground, accountSelect, addAccount, pkg, accountName, editAccountName } from './utils.js';
 const { AZauth, Microsoft, Mojang } = require('minecraft-java-core');
 
 // libs
@@ -134,6 +134,8 @@ class Launcher {
 
         if (accounts?.length) {
             for (let account of accounts) {
+                console.log(account.name);
+                await editAccountName(account.name);
                 let account_ID = account.ID
                 if (account.error) {
                     await this.db.deleteData('accounts', account_ID)
